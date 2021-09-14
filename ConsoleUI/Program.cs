@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Business
+namespace ConsoleUI
 {
     class Program
     {
