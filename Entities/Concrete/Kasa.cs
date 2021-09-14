@@ -1,6 +1,8 @@
-﻿namespace Entities
+﻿using Entities.Abstract;
+
+namespace Entities
 {
-    public class Kasa
+    public class Kasa:IEntity
     {
         public int Id { get; set; }
         public int KasaKodu { get; set; }

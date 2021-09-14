@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Entities.Abstract;
+using System.Collections.Generic;
 using System.Text;
 
 namespace Entities
 {
-    public class Bakiye_Banka
+    public class Bakiye_Banka:IEntity
     {
         public int Id { get; set; }
         public int BankaId { get; set; }

@@ -1,6 +1,8 @@
-﻿namespace Entities
+﻿using Entities.Abstract;
+
+namespace Entities
 {
-    public class Banka
+    public class Banka:IEntity
     {
         public int Id { get; set; }
         public int BankaKodu { get; set; }

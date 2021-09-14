@@ -1,6 +1,8 @@
-﻿namespace Entities
+﻿using Entities.Abstract;
+
+namespace Entities
 {
-    public class Bakiye_Kasa
+    public class Bakiye_Kasa:IEntity
     {
         public int Id { get; set; }
         public int KasaId { get; set; }

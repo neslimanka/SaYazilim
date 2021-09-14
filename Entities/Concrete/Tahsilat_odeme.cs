@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Entities.Abstract;
+using System;
 
 namespace Entities
 {
-    public class Tahsilat_odeme
+    public class Tahsilat_odeme:IEntity
     {
         public int Id { get; set; }
         public int IslemTipi { get; set; }
