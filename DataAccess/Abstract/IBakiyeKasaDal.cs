@@ -1,15 +1,13 @@
-﻿using Entities;
+﻿
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IBakiyeKasaDal
+    public interface IBakiyeKasaDal : IEntityRepository<Bakiye_Kasa>
     {
-        List<Bakiye_Kasa> GetAll();
-        void Add(Bakiye_Kasa bakiyeKasa);
-        void Update(Bakiye_Kasa bakiyeKasa);
-        void Delete(Bakiye_Kasa bakiyeKasa);
+        
     }
 }

@@ -5,11 +5,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IBakiyeBankaDal
+    public interface IBakiyeBankaDal : IEntityRepository<Bakiye_Banka>
     {
-        List<Bakiye_Banka> GetAll();
-        void Add(Bakiye_Banka bakiyeBanka);
-        void Update(Bakiye_Banka bakiyeBanka);
-        void Delete(Bakiye_Banka bakiyeBanka);
+     
     }
 }

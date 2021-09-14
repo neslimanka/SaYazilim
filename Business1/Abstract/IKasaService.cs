@@ -3,10 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataAccess.Abstract
+namespace Business1.Abstract
 {
-    public interface IBankaDal : IEntityRepository<Banka>
+    public interface IKasaService
     {
-        
+        List<Kasa> GetAll();
     }
 }

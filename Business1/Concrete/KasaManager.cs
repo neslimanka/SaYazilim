@@ -1,11 +1,11 @@
-﻿using Business.Abstract;
+﻿using Business1.Abstract;
 using DataAccess.Abstract;
 using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Business.Concrete
+namespace Business1.Concrete
 {
     public class KasaManager : IKasaService
     {

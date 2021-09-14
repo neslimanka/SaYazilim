@@ -1,4 +1,6 @@
-﻿using Business.Concrete;
+﻿
+using Business1.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using System;
 
@@ -9,7 +11,7 @@ namespace ConsoleUI
         static void Main(string[] args)
         {
 
-            BankaManager bankaManager = new BankaManager(new InMemoryBankaDal());
+            BankaManager bankaManager = new BankaManager(new EfBankaDal());
 
             foreach (var item in bankaManager.GetAll())
             {

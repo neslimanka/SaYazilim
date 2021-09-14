@@ -5,12 +5,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface IKasaDal
+    public interface IKasaDal : IEntityRepository<Kasa>
     {
-
-        List<Kasa> GetAll();
-        void Add(Kasa kasa);
-        void Update(Kasa kasa);
-        void Delete(Kasa kasa);
+       
     }
 }

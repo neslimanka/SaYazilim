@@ -5,12 +5,8 @@ using System.Text;
 
 namespace DataAccess.Abstract
 {
-    public interface ITahsilatOdemeDal
+    public interface ITahsilatOdemeDal : IEntityRepository<Tahsilat_odeme>
     {
-        List<Tahsilat_odeme> GetAll();
-        void Add(Tahsilat_odeme tahsilatOdeme);
-        void Update(Tahsilat_odeme tahsilatOdeme);
-        void Delete(Tahsilat_odeme tahsilatOdeme);
-
+        
     }
 }

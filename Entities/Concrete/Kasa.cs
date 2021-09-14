@@ -1,4 +1,5 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
+
 
 namespace Entities
 {
@@ -6,7 +7,7 @@ namespace Entities
     {
         public int Id { get; set; }
         public int KasaKodu { get; set; }
-        public int KasaAdi { get; set; }
+        public string KasaAdi { get; set; }
     }
 
 }

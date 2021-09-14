@@ -3,6 +3,7 @@ using Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Concrete.InMemory
@@ -34,9 +35,19 @@ namespace DataAccess.Concrete.InMemory
             _banka.Remove(bankaToDelete);
         }
 
+        public Banka Get(Expression<Func<Banka, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Banka> GetAll()
         {
             return _banka;
+        }
+
+        public List<Banka> GetAll(Expression<Func<Banka, bool>> filter)
+        {
+            throw new NotImplementedException();
         }
 
         public void Update(Banka banka)
