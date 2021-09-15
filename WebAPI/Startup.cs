@@ -31,8 +31,8 @@ namespace WebAPI
         {
 
             services.AddControllers();
-            services.AddSingleton<IBankaService, BankaManager>();
-            services.AddSingleton<IBankaDal, EfBankaDal>();
+            //services.AddSingleton<IBankaService, BankaManager>();
+            //services.AddSingleton<IBankaDal, EfBankaDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

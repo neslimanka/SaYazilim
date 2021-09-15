@@ -1,5 +1,7 @@
 ﻿using Business1.Abstract;
 using Business1.Constants;
+using Business1.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities;
@@ -19,9 +21,11 @@ namespace Business1.Concrete
             _bankaDal = bankaDal;
         }
 
-
+        [ValidationAspect(typeof(BankaValidator))]
         public IResult Add(Banka banka)
         {
+
+
             _bankaDal.Add(banka);
             return new SuccessResult();
         }

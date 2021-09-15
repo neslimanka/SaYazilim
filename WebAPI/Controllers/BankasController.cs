@@ -21,7 +21,7 @@ namespace WebAPI.Controllers
             _bankaService = bankaService;
         }
 
-      [HttpGet]
+      [HttpGet("get")]
       public IActionResult Get()
         {
             var result = _bankaService.GetAll();
@@ -32,7 +32,7 @@ namespace WebAPI.Controllers
             return BadRequest(result.Message);
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         public IActionResult Post(Banka banka)
         {
             var result = _bankaService.Add(banka);
