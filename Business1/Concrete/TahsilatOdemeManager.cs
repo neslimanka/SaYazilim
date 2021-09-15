@@ -1,4 +1,6 @@
 ﻿using Business1.Abstract;
+using Business1.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities;
 using System;
@@ -17,9 +19,27 @@ namespace Business1.Concrete
             _tahsilatOdeme = tahsilatOdeme;
         }
 
-        public List<Tahsilat_odeme> GetAll()
+        public IResult Add(Tahsilat_odeme tahsilatOdeme)
         {
-            return _tahsilatOdeme.GetAll();
+            _tahsilatOdeme.Add(tahsilatOdeme);
+            return new SuccessResult();
+        }
+
+        public IResult Delete(Tahsilat_odeme tahsilatOdeme)
+        {
+            _tahsilatOdeme.Delete(tahsilatOdeme);
+            return new SuccessResult();
+        }
+
+        public IDataResult<List<Tahsilat_odeme>> GetAll()
+        {
+            return new SuccessDataResult<List<Tahsilat_odeme>>(_tahsilatOdeme.GetAll(), Messages.Listed);
+        }
+
+        public IResult Update(Tahsilat_odeme tahsilatOdeme)
+        {
+            _tahsilatOdeme.Update(tahsilatOdeme);
+            return new SuccessResult();
         }
     }
 }

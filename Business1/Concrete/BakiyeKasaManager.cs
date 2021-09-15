@@ -1,4 +1,6 @@
 ﻿using Business1.Abstract;
+using Business1.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities;
 using System;
@@ -15,9 +17,27 @@ namespace Business1.Concrete
             _bakiyeKasa = bakiyeKasa;
         }
 
-        public List<Bakiye_Kasa> GetAll()
+        public IResult Add(Bakiye_Kasa bakiyeKasa)
         {
-            return _bakiyeKasa.GetAll();
+            _bakiyeKasa.Add(bakiyeKasa);
+            return new SuccessResult();
+        }
+
+        public IResult Delete(Bakiye_Kasa bakiyeKasa)
+        {
+            _bakiyeKasa.Delete(bakiyeKasa);
+            return new SuccessResult();
+        }
+
+        public IDataResult<List<Bakiye_Kasa>> GetAll()
+        {
+            return new SuccessDataResult<List<Bakiye_Kasa>>(_bakiyeKasa.GetAll(), Messages.Listed);
+        }
+
+        public IResult Update(Bakiye_Kasa bakiyeKasa)
+        {
+            _bakiyeKasa.Update(bakiyeKasa);
+            return new SuccessResult();
         }
     }
 }

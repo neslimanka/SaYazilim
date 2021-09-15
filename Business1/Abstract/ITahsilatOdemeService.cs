@@ -1,4 +1,5 @@
-﻿using Entities;
+﻿using Core.Utilities.Results;
+using Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +8,9 @@ namespace Business1.Abstract
 {
     public interface ITahsilatOdemeService
     {
-        List<Tahsilat_odeme> GetAll();
+        IDataResult<List<Tahsilat_odeme>> GetAll();
+        IResult Add(Tahsilat_odeme tahsilatOdeme);
+        IResult Update(Tahsilat_odeme tahsilatOdeme);
+        IResult Delete(Tahsilat_odeme tahsilatOdeme);
     }
 }

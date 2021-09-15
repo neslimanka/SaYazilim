@@ -1,4 +1,6 @@
 ﻿using Business1.Abstract;
+using Business1.Constants;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities;
 using System;
@@ -17,9 +19,28 @@ namespace Business1.Concrete
             _bankaDal = bankaDal;
         }
 
-        public List<Banka> GetAll()
+
+        public IResult Add(Banka banka)
         {
-            return _bankaDal.GetAll();
+            _bankaDal.Add(banka);
+            return new SuccessResult();
+        }
+
+        public IResult Delete(Banka banka)
+        {
+            _bankaDal.Delete(banka);
+            return new SuccessResult();
+        }
+
+        public IDataResult<List<Banka>> GetAll()
+        {
+            return new SuccessDataResult<List<Banka>>(_bankaDal.GetAll(),Messages.Listed);
+        }
+
+        public IResult Update(Banka banka)
+        {
+            _bankaDal.Update(banka);
+            return new SuccessResult();
         }
     }
 }
